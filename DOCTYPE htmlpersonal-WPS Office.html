@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahim Khan Official | Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg: #030712;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        /* Profile picture ke liye 3D container */
+        .profile-container {
+            position: relative;
+            width: 280px;
+            height: 380px;
+            perspective: 1000px;
+        }
+
+        .profile-card {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .profile-card:hover {
+            transform: rotateY(15deg) rotateX(10deg);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .glow {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            filter: blur(40px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 glass mt-4 max-w-5xl left-1/2 -translate-x-1/2 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-extrabold tracking-tighter gradient-text uppercase">RAHIM KHAN</h1>
+        <div class="hidden md:flex space-x-8 font-medium text-xs uppercase tracking-widest">
+            <a href="#home" class="hover:text-indigo-400 transition">Ghar</a>
+            <a href="#gallery" class="hover:text-indigo-400 transition">Tasaveer</a>
+            <a href="#apps" class="hover:text-indigo-400 transition">Apps</a>
+            <a href="#contact" class="hover:text-indigo-400 transition">Rabta</a>
+        </div>
+        <div class="flex space-x-4">
+            <a href="https://www.facebook.com/share/1F5ygJWp66/" target="_blank" class="hover:scale-125 transition duration-300"><i class="fab fa-facebook text-xl text-blue-500"></i></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-32 px-6">
+        <div class="profile-container mb-10">
+            <div class="glow"></div>
+            <div class="profile-card">
+                <!-- Aapki bheji hui picture ka link yahan add kar diya gaya hai -->
+                <img src="https://i.ibb.co/0Rb2Y0qF/IMG-20251028-171447-079.webp" alt="Rahim Khan ki Picture">
+            </div>
+        </div>
+        
+        <div class="text-center max-w-3xl">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase tracking-tighter">RAHIM <span class="gradient-text">KHAN</span></h2>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 italic font-light">
+                "Mehnat itni khamoshi se karo ke kamyabi shor macha de."
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://www.facebook.com/share/1F5ygJWp66/" target="_blank" class="px-10 py-4 bg-blue-600 rounded-full font-bold hover:bg-blue-700 transition flex items-center shadow-lg shadow-blue-500/20">
+                    <i class="fab fa-facebook-f mr-3"></i> Facebook
+                </a>
+                <a href="#gallery" class="px-10 py-4 glass rounded-full font-bold hover:bg-white/10 transition">Gallery Dekhein</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-12 border-l-4 border-indigo-500 pl-4 uppercase tracking-widest">Meri <span class="text-indigo-500">Duniya</span></h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-3 card-3d transition-all duration-300">
+                <div class="rounded-2xl overflow-hidden h-64 mb-4">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold px-2">Technology</h4>
+            </div>
+            <div class="glass p-3 card-3d transition-all duration-300">
+                <div class="rounded-2xl overflow-hidden h-64 mb-4">
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=600&q=80" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold px-2">Creativity</h4>
+            </div>
+            <div class="glass p-3 card-3d transition-all duration-300">
+                <div class="rounded-2xl overflow-hidden h-64 mb-4">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold px-2">Development</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps & Books -->
+    <section id="apps" class="py-20 bg-slate-900/40">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h3 class="text-3xl font-bold mb-8">MY <span class="gradient-text">APPS</span></h3>
+                <div class="space-y-4">
+                    <div class="glass p-6 flex items-center justify-between card-3d transition-all">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-14 h-14 bg-indigo-500/20 rounded-2xl flex items-center justify-center text-indigo-400 text-xl">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span class="font-bold text-lg">Rahim Tools</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-600"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold mb-8">MY <span class="gradient-text">BOOKS</span></h3>
+                <div class="glass p-8">
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-3"></i> Quran Majeed (Tafseer)</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-3"></i> Peer-e-Kamil</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-3"></i> Bang-e-Dara</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 text-center border-t border-white/5">
+        <h2 class="text-2xl font-bold tracking-[0.5em] mb-8 gradient-text">RAHIM KHAN OFFICIAL</h2>
+        <div class="flex justify-center space-x-10 mb-12">
+            <a href="https://www.facebook.com/share/1F5ygJWp66/" target="_blank" class="w-14 h-14 glass flex items-center justify-center rounded-full text-blue-500 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="#" class="w-14 h-14 glass flex items-center justify-center rounded-full text-pink-500 hover:bg-pink-500 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-tiktok text-2xl"></i></a>
+            <a href="#" class="w-14 h-14 glass flex items-center justify-center rounded-full text-green-500 hover:bg-green-600 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-whatsapp text-2xl"></i></a>
+        </div>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.3em]">Design by Rahim Khan &copy; 2024 &bull; Kamyabi aapke qadam choome</p>
+    </footer>
+
+</body>
+</html>
+
+
